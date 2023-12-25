@@ -17,10 +17,10 @@ try:
 
 except Exception as e:
     st.error(f"Sorry ," + e.__class__.__name__ + " has occurred" )
-    if conn  and conn.is_connected():
-        conn.close()
-    if cursor  and cursor is not None:
-        cursor.close()    
+    #if conn  and conn.is_connected():
+     #   conn.close()
+    #if cursor  and cursor is not None:
+     #   cursor.close()    
 
 #global variable declaration
 global df_HR
