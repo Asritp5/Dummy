@@ -5,7 +5,6 @@ import mysql.connector
 
 cursor = None  #prevent cursor not defined error
 global conn
-conn = None
 # Establish a connection to database
 try:
     
