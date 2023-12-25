@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import mysql.connector
 
-conn = None
+
 cursor = None  #prevent cursor not defined error
 
 #global variable declaration
