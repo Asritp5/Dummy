@@ -49,7 +49,7 @@ def match(ID):
         #close the connection
         #if conn:
          #conn.close()
-         #st.success("DB connection closed") 
+         st.success("DB connection closed") 
 
 #function for creating dataframes
 def create_df():
