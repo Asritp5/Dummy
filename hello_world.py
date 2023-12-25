@@ -7,7 +7,7 @@ global cursor  #prevent cursor not defined error
 global conn
 # Establish a connection to database
 try:
-    
+    global cursor ,conn
     conn = mysql.connector.connect(
     host=st.secrets["host"],
     user=st.secrets["user"],
