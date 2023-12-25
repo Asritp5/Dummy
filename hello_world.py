@@ -4,15 +4,8 @@ import mysql.connector
 
 
 cursor = None  #prevent cursor not defined error
-
-#global variable declaration
-global df_HR
-df_HR=pd.DataFrame()
-global df_USER
-df_USER=pd.DataFrame()
-
-
-
+global conn
+conn = None
 # Establish a connection to database
 try:
     conn = mysql.connector.connect(
@@ -29,6 +22,11 @@ except Exception as e:
     if cursor  and cursor is not None:
         cursor.close()    
 
+#global variable declaration
+global df_HR
+df_HR=pd.DataFrame()
+global df_USER
+df_USER=pd.DataFrame()
 
 def match(ID):
     try:
