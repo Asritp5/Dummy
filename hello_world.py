@@ -3,7 +3,7 @@ import pandas as pd
 import mysql.connector
 
 
-cursor = None  #prevent cursor not defined error
+global cursor  #prevent cursor not defined error
 global conn
 # Establish a connection to database
 try:
