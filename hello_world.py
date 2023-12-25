@@ -30,6 +30,7 @@ df_USER=pd.DataFrame()
 
 def match(ID):
     try:
+        global cursor ,conn
         global df_HR , df_USER
         # Execute  query with  placeholder for  ID
         cursor.execute("SELECT * FROM HR_REQUIREMENTS WHERE ADMIN_ID=%s", (ID,)) #(ID,) creates one element tuple
@@ -54,6 +55,7 @@ def match(ID):
 #function for creating dataframes
 def create_df():
   #Fetch data
+  global cursor ,conn
   result = cursor.fetchall()
   #Convert the result to a DataFrame 
   df= pd.DataFrame(result, columns=[col[0] for col in cursor.description])
