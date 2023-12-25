@@ -8,7 +8,7 @@ global conn
 conn = None
 # Establish a connection to database
 try:
-    global conn 
+    
     conn = mysql.connector.connect(
     host=st.secrets["host"],
     user=st.secrets["user"],
